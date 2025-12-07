@@ -1,0 +1,47 @@
+:root{
+  --green-1:#556B2F;
+  --green-2:#8FBC8F;
+  --brown-1:#8B4513;
+  --beige:#F5F3E7;
+  --white:#ffffff;
+  --muted:#C6B89E;
+}
+
+*{box-sizing:border-box}
+body{margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:var(--beige); color:#1f2d1f;}
+
+/* HEADER */
+.header{
+  background: linear-gradient(90deg,var(--green-1), var(--brown-1));
+  color:var(--white);
+  padding:15px 0;
+  position:sticky; top:0; z-index:100;
+}
+.header-container{display:flex; justify-content:space-between; align-items:center; width:90%; max-width:1200px; margin:0 auto;}
+.header .logo{font-weight:800; font-size:22px}
+.header .nav a{color:#fff; margin-left:20px; text-decoration:none; font-weight:600}
+.header .nav a:hover{color:var(--beige)}
+
+/* HERO */
+.hero-2{padding:60px 0; text-align:center; background:linear-gradient(to right,var(--green-2), var(--green-1)); color:#fff;}
+.hero-2 h1{font-size:36px; margin-bottom:12px; animation:fadeInUp 0.8s ease forwards;}
+.hero-2 p{font-size:18px; animation:fadeInUp 1s ease forwards;}
+
+/* TABLE */
+.table-section{padding:40px 0;}
+.disease-table{width:100%; border-collapse:collapse; min-width:1000px; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,0.08); border-radius:10px; overflow:hidden;}
+.disease-table th, .disease-table td{padding:12px; text-align:center; border-bottom:1px solid #eae7db;}
+.disease-table th{background:linear-gradient(90deg,var(--green-2), var(--green-1)); color:#fff; font-weight:700; font-size:14px; text-transform:uppercase;}
+.disease-table tbody tr:hover{background:var(--beige); transform:scale(1.01); transition:all 0.2s ease;}
+
+/* FOOTER */
+.footer{padding:18px 0; background:linear-gradient(90deg,var(--green-1), var(--brown-1)); color:#fff; text-align:center; font-weight:600;}
+
+/* ANIMATIONS */
+@keyframes fadeInUp { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:none;} }
+
+@media(max-width:980px){
+  .disease-table{min-width:unset; font-size:13px;}
+  .hero-2 h1{font-size:28px;}
+  .hero-2 p{font-size:16px;}
+}
